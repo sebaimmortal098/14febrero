@@ -1,0 +1,48 @@
+<div class="relative min-h-screen font-sans antialiased text-gray-800">
+  <!-- Contenedor principal con efecto de álbum de recortes -->
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto bg-white/90 rounded-lg shadow-2xl overflow-hidden backdrop-blur-sm border-4 border-white/50"
+         style="--paper-texture: url('/assets/paper-texture.png'); background-image: var(--paper-texture);">
+
+      <!-- Header -->
+      <app-header></app-header>
+
+      <!-- Contenido del "Scrapbook" -->
+      <div class="p-6 md:p-10 space-y-12">
+        <!-- Hero Section (Relicario) -->
+        <app-hero></app-hero>
+
+        <!-- Letter Section -->
+        @if (!isLetterOpen()) {
+          <app-letter></app-letter>
+        }
+
+        <!-- Memory Gallery -->
+        <app-memory-gallery></app-memory-gallery>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Icono de la carta -->
+  <app-letter-icon (openLetter)="toggleLetter()"></app-letter-icon>
+
+  <!-- Modal de la carta -->
+  @if (isLetterOpen()) {
+    <div class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" (click)="toggleLetter()">
+      <div class="relative max-w-2xl w-full bg-amber-50/90 p-8 md:p-12 rounded-lg shadow-2xl transform transition-all duration-300 scale-100" 
+           style="background-image: url('/assets/paper-texture.png');">
+        <div class="prose prose-lg max-w-none font-serif text-gray-800">
+          <h2 class="font-script text-4xl text-rose-900 mb-4">My Dearest,</h2>
+          <p>This is the full love letter, revealed when you click the icon. It can be longer and more personal.</p>
+          <p>You can fill this with all your feelings, memories, and dreams for the future. It's a secret message, just for them.</p>
+          <p class="text-right font-script text-2xl text-rose-900 mt-6">
+            With all my love,<br>
+            Your Valentine
+          </p>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+

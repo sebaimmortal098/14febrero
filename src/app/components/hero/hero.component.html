@@ -1,0 +1,53 @@
+<section class="relative z-10 mt-8 md:mt-10" @fadeUp>
+  <!-- Contenedor “Scrapbook” -->
+  <div class="scrap-page mx-auto max-w-3xl">
+    <div class="scrap-page__inner">
+      <div class="grid items-center gap-6 md:grid-cols-[1fr_auto_1fr] md:gap-8">
+        <div class="text-center md:text-right">
+          <p class="font-serif text-sm text-zinc-700/80">Para:</p>
+          <p class="font-script text-3xl text-zinc-900 md:text-4xl">Mi persona favorita</p>
+        </div>
+
+        <!-- Locket -->
+        <div class="locket -rotate-1">
+          <div class="locket__ring"></div>
+          <div class="locket__heart">
+            <img class="locket__photo" [src]="photoUrl" alt="Foto principal" />
+          </div>
+          <div class="locket__shine"></div>
+        </div>
+
+        <div class="text-center md:text-left">
+          <p class="font-serif text-sm text-zinc-700/80">Fecha:</p>
+          <p class="font-script text-3xl text-zinc-900 md:text-4xl">14 de febrero</p>
+        </div>
+      </div>
+
+      <!-- Washi tape / stickers -->
+      <div class="tape tape--left" aria-hidden="true"></div>
+      <div class="tape tape--right" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Efecto de relicario -->
+  <div class="relative flex justify-center items-center" @fadeUp>
+    <div class="relative w-64 h-64 md:w-80 md:h-80">
+      <!-- Fondo del relicario (simula metal) -->
+      <div class="absolute inset-0 bg-linear-to-br from-gray-300 to-gray-500 rounded-full shadow-2xl transform -rotate-12"></div>
+      
+      <!-- Borde interior -->
+      <div class="absolute inset-2 bg-white rounded-full transform rotate-12"></div>
+
+      <!-- Foto principal con máscara de corazón -->
+      <div class="absolute inset-4 rounded-full overflow-hidden transform -rotate-6 shadow-inner">
+        <img src="https://i.pinimg.com/564x/1b/80/77/1b80773233963b65133b855173314c91.jpg" 
+             alt="Main couple photo" 
+             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+      </div>
+
+      <!-- "Washi tape" decorativo -->
+      <div class="absolute -top-4 -left-4 w-24 h-10 bg-pink-200/70 transform -rotate-45 shadow-md backdrop-blur-sm" style="mask-image: url('/assets/tape.svg'); mask-size: cover;"></div>
+    </div>
+  </div>
+</section>
+

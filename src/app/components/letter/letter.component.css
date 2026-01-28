@@ -1,0 +1,65 @@
+:host {
+  display: block;
+}
+
+.letter {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.letter__paper {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1.05);
+}
+
+.letter__content {
+  position: relative;
+  padding: 22px;
+}
+
+.letter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 2px dashed rgba(140, 90, 70, 0.22);
+  border-radius: 18px;
+  transform: rotate(-0.2deg);
+}
+
+.tape {
+  position: absolute;
+  width: 120px;
+  height: 34px;
+  border-radius: 8px;
+  opacity: 0.78;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(135deg, rgba(255, 225, 190, 0.85), rgba(255, 205, 225, 0.85));
+}
+
+.tape--a {
+  top: 10px;
+  left: 18px;
+  transform: rotate(-9deg);
+}
+
+.tape--b {
+  bottom: 12px;
+  right: 24px;
+  transform: rotate(10deg);
+}
+
+@media (min-width: 768px) {
+  .letter__content {
+    padding: 30px;
+  }
+}
+

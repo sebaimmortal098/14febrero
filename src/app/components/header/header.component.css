@@ -1,0 +1,5 @@
+/* Deja el look “ink on paper” sutil */
+:host {
+  display: block;
+}
+

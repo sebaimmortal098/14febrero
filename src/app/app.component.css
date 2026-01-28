@@ -1,0 +1,5 @@
+/* Root: reserva z-index para el fondo */
+:host {
+  display: block;
+}
+
