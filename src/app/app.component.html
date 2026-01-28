@@ -1,7 +1,7 @@
 <div class="relative min-h-screen font-sans antialiased text-gray-800">
   <!-- Contenedor principal con efecto de álbum de recortes -->
   <main class="container mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto bg-white/30 rounded-lg shadow-2xl overflow-hidden backdrop-blur-sm border-4 border-white/70">
+    <div class="max-w-4xl mx-auto bg-white/30 rounded-lg shadow-2xl overflow-hidden backdrop-blur-sm border-4">
 
       <!-- Contenido del "Scrapbook" -->
       <div class="p-6 md:p-10">
@@ -23,25 +23,30 @@
     </div>
   </main>
 
-  <!-- Icono de la carta -->
-  <!-- <app-letter-icon (openLetter)="toggleLetter()"></app-letter-icon> -->
 
   <!-- Modal de la carta -->
   @if (isLetterOpen()) {
     <div class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" (click)="toggleLetter()">
-      <div class="relative max-w-2xl w-full bg-amber-50/90 p-8 md:p-12 rounded-lg shadow-2xl transform transition-all duration-300 scale-100" 
-           style="background-image: url('/assets/paper-texture.png');">
-        <div class="prose prose-lg max-w-none font-serif text-gray-800">
-          <h2 class="font-script text-4xl text-rose-900 mb-4">My Dearest,</h2>
-          <p>This is the full love letter, revealed when you click the icon. It can be longer and more personal.</p>
-          <p>You can fill this with all your feelings, memories, and dreams for the future. It's a secret message, just for them.</p>
-          <p class="text-right font-script text-2xl text-rose-900 mt-6">
-            With all my love,<br>
-            Your Valentine
-          </p>
+      <div class="relative max-w-6xl w-full">
+        <!-- Imagen del pergamino -->
+        <img src="/assets/pergamino.png" alt="Carta en pergamino" class="w-full h-auto">
+        
+        <!-- Contenedor del texto, posicionado sobre la imagen -->
+        <div class="absolute inset-0 p-12 pt-32 md:p-20 md:pt-48 flex items-start justify-center">
+          <div class="prose prose-lg max-w-none font-serif text-gray-800 text-center">
+            <h2 class="font-script text-4xl text-rose-900 mb-4">My Dearest,</h2>
+            <p>This is the full love letter, revealed when you click the icon. It can be longer and more personal.</p>
+            <p>You can fill this with all your feelings, memories, and dreams for the future. It's a secret message, just for them.</p>
+            <p class="text-right font-script text-2xl text-rose-900 mt-6">
+              With all my love,<br>
+              Your Valentine
+            </p>
+          </div>
         </div>
       </div>
     </div>
   }
 </div>
+
+<app-animated-icon></app-animated-icon>
 

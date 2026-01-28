@@ -24,22 +24,22 @@ interface Photo {
 export class MemoryGalleryComponent {
   photos = signal<Photo[]>([
     {
-      url: '/assets/gallery/1.jpg',
+      url: '/assets/foto1.JPG',
       caption: 'Our first trip',
       rotation: 'transform -rotate-3',
     },
     {
-      url: '/assets/gallery/2.jpg',
+      url: '/assets/foto2.JPG',
       caption: 'Beach days',
       rotation: 'transform rotate-2',
     },
     {
-      url: '/assets/gallery/3.jpg',
+      url: '/assets/foto3.JPG',
       caption: 'City lights',
       rotation: 'transform rotate-1',
     },
     {
-      url: '/assets/gallery/4.jpg',
+      url: '/assets/foto4.JPG',
       caption: 'Coffee dates',
       rotation: 'transform -rotate-2',
     },
