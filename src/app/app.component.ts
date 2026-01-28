@@ -8,7 +8,7 @@ import { LetterIconComponent } from './components/letter-icon/letter-icon.compon
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, LetterComponent, MemoryGalleryComponent, LetterIconComponent], // Añade el nuevo componente a los imports
+  imports: [HeaderComponent, HeroComponent, LetterComponent, MemoryGalleryComponent, LetterComponent], // Añade el nuevo componente a los imports
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

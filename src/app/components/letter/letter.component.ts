@@ -16,6 +16,6 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ],
 })
 export class LetterComponent {
-  protected readonly paperTextureUrl = '/assets/paper-texture.jpg';
+  protected readonly paperTextureUrl = '/assets/paper-texture.jpeg';
 }
 

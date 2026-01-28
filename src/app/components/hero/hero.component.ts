@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -19,6 +19,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ],
 })
 export class HeroComponent {
+  @Output() openLetter = new EventEmitter<void>();
   // Reemplaza por tu foto real cuando quieras
   protected readonly photoUrl = '/assets/paper-texture.jpg';
 }

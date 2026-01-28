@@ -1,16 +1,15 @@
 <div class="relative min-h-screen font-sans antialiased text-gray-800">
   <!-- Contenedor principal con efecto de álbum de recortes -->
   <main class="container mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto bg-white/90 rounded-lg shadow-2xl overflow-hidden backdrop-blur-sm border-4 border-white/50"
-         style="--paper-texture: url('/assets/paper-texture.png'); background-image: var(--paper-texture);">
-
-      <!-- Header -->
-      <app-header></app-header>
+    <div class="max-w-4xl mx-auto bg-white/30 rounded-lg shadow-2xl overflow-hidden backdrop-blur-sm border-4 border-white/70">
 
       <!-- Contenido del "Scrapbook" -->
-      <div class="p-6 md:p-10 space-y-12">
+      <div class="p-6 md:p-10">
+        <!-- Header -->
+        <app-header></app-header>
+        
         <!-- Hero Section (Relicario) -->
-        <app-hero></app-hero>
+        <app-hero class="mb-8" (openLetter)="toggleLetter()"></app-hero>
 
         <!-- Letter Section -->
         @if (!isLetterOpen()) {
@@ -25,7 +24,7 @@
   </main>
 
   <!-- Icono de la carta -->
-  <app-letter-icon (openLetter)="toggleLetter()"></app-letter-icon>
+  <!-- <app-letter-icon (openLetter)="toggleLetter()"></app-letter-icon> -->
 
   <!-- Modal de la carta -->
   @if (isLetterOpen()) {

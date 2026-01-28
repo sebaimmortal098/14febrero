@@ -5,27 +5,15 @@
 /* Base "Red Elegance" */
 html,
 body {
-  @apply bg-[#a80000]; /* Un rojo intenso y rico */
   height: 100%;
   overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-  z-index: -1;
-  pointer-events: none;
-}
-
 body {
-  background: radial-gradient(1200px 900px at 20% 0%, rgba(255, 220, 230, 0.12), transparent 55%),
-    radial-gradient(900px 700px at 80% 20%, rgba(255, 235, 200, 0.10), transparent 55%),
-    #b02c2c; /* valentine-red */
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
