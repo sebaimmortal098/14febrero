@@ -7,8 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        script: ['"Dancing Script"', 'cursive'],
-        serif: ['"Playfair Display"', 'serif'],
+        script: ['"Great Vibes"', 'cursive'],
+        serif: ['"Montserrat"', 'serif'],
       },
       keyframes: {
         'fade-in-up': {

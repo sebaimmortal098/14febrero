@@ -1,15 +1,16 @@
 <section class="relative z-10 mt-10 md:mt-14">
   <div class="mx-auto max-w-5xl">
+    <h2 class="text-center font-serif text-4xl md:text-5xl text-[#11223a] mb-8 text-outline font-bold">Polaroids</h2>
 
     <!-- Masonry con columns -->
     <div class="mt-12">
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+      <div class="columns-2 md:columns-3 gap-4 md:gap-8">
         @for (photo of photos(); track photo.url) {
-          <div class="group relative perspective-[1000px]">
+          <div (click)="selectPhoto(photo)" class="group relative perspective-[1000px] break-inside-avoid mb-4">
             <div class="relative bg-white/90 p-3 pb-8 rounded-md shadow-lg border border-gray-200/80 transition-transform duration-500 group-hover:scale-105 transform-3d group-hover:rotate-y-0"
                  [class]="photo.rotation">
               
-              <img [src]="photo.url" [alt]="photo.caption" class="w-full h-auto rounded-sm object-cover">
+              <img [src]="photo.url" [alt]="photo.caption" class="w-full h-auto rounded-sm object-cover cursor-pointer">
               
               <p class="font-script text-lg text-center mt-3 text-gray-700">
                 {{ photo.caption }}

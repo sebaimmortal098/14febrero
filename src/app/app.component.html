@@ -1,7 +1,7 @@
 <div class="relative min-h-screen font-sans antialiased text-gray-800">
   <!-- Contenedor principal con efecto de álbum de recortes -->
   <main class="container mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl overflow-hidden">
+    <div class="max-w-4xl mx-auto text-#FFF5F2/1 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl overflow-hidden">
 
       <!-- Contenido del "Scrapbook" -->
       <div class="p-6 md:p-10">
@@ -12,41 +12,26 @@
         <app-hero class="mb-8" (openLetter)="toggleLetter()"></app-hero>
 
         <!-- Letter Section -->
-        @if (!isLetterOpen()) {
+        @if (isLetterOpen()) {
           <app-letter></app-letter>
         }
 
         <!-- Memory Gallery -->
-        <app-memory-gallery></app-memory-gallery>
+        <app-memory-gallery (photoSelected)="onPhotoSelected($event)"></app-memory-gallery>
       </div>
 
     </div>
   </main>
-
-
-  <!-- Modal de la carta -->
-  @if (isLetterOpen()) {
-    <div class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" (click)="toggleLetter()">
-      <div class="relative max-w-6xl w-full">
-        <!-- Imagen del pergamino -->
-        <img src="/assets/pergamino.png" alt="Carta en pergamino" class="w-full h-auto">
-        
-        <!-- Contenedor del texto, posicionado sobre la imagen -->
-        <div class="absolute inset-0 px-16 pt-48 md:px-24 md:pt-64 flex items-start justify-center">
-          <div class="prose prose-lg max-w-none font-serif text-gray-800 text-center">
-            <h2 class="font-script text-4xl text-rose-900 mb-4">My Dearest,</h2>
-            <p>This is the full love letter, revealed when you click the icon. It can be longer and more personal.</p>
-            <p>You can fill this with all your feelings, memories, and dreams for the future. It's a secret message, just for them.</p>
-            <p class="text-right font-script text-2xl text-rose-900 mt-6">
-              With all my love,<br>
-              Your Valentine
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  }
 </div>
 
 <app-animated-icon></app-animated-icon>
+
+<app-music-toggle [isPlaying]="isPlaying" (toggle)="toggleMusic()"></app-music-toggle>
+
+<app-photo-modal [photo]="selectedPhoto" (closeModal)="onCloseModal()"></app-photo-modal>
+
+<audio #audioPlayer loop>
+  <source src="assets/audio/cancion.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
 
