@@ -95,6 +95,26 @@ export class MemoryGalleryComponent {
       caption: 'Nuestros ojitos (los tuyos son más bonitos)',
       rotation: 'transform -rotate-1',
     },
+    {
+      url: '/assets/foto16.JPG',
+      caption: 'Mi ponquecito gordito',
+      rotation: 'transform -rotate-1',
+    },
+    {
+      url: '/assets/foto17.JPG',
+      caption: 'Mira que guapa',
+      rotation: 'transform -rotate-1',
+    },
+    {
+      url: '/assets/foto18.jpg',
+      caption: ':)',
+      rotation: 'transform -rotate-1',
+    },
+    {
+      url: '/assets/foto19.JPG',
+      caption: 'En la noche en un parque, luego de un ensayo',
+      rotation: 'transform -rotate-1',
+    },
   ]);
 
   selectPhoto(photo: Photo) {
