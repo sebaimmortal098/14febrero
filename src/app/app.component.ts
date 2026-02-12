@@ -8,6 +8,7 @@ import { MemoryGalleryComponent } from './components/memory-gallery/memory-galle
 import { AnimatedIcon } from "./animated-icon/animated-icon";
 import { MusicToggleComponent } from './components/music-toggle/music-toggle.component';
 import { PhotoModalComponent } from './components/photo-modal/photo-modal.component';
+import { ParticlesBackgroundComponent } from './components/particles-background/particles-background';
 
 interface Photo {
   url: string;
@@ -17,7 +18,7 @@ interface Photo {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, HeroComponent, LetterComponent, MemoryGalleryComponent, AnimatedIcon, MusicToggleComponent, PhotoModalComponent],
+  imports: [CommonModule, HeaderComponent, HeroComponent, LetterComponent, MemoryGalleryComponent, AnimatedIcon, MusicToggleComponent, PhotoModalComponent, ParticlesBackgroundComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -115,6 +115,11 @@ export class MemoryGalleryComponent {
       caption: 'En la noche en un parque, luego de un ensayo',
       rotation: 'transform -rotate-1',
     },
+    {
+      url: '/assets/foto20.jpg',
+      caption: 'Mira que hermosa, esa carita tan linda',
+      rotation: 'transform -rotate-1',
+    },
   ]);
 
   selectPhoto(photo: Photo) {
